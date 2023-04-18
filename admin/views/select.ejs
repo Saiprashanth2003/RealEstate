@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Choose</title>
+    <style>
+      /* Center the boxes horizontally and vertically */
+      body {
+        background-color: rgb(208, 208, 186);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      /* Style the boxes */
+      .box {
+        background-color: rgba(255, 0, 170, 0.401);
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: aqua;
+        font-size: 24px;
+        border-radius: 5%;
+        line-height: 100px;
+      }
+
+      /* Style the header */
+      header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Style the footer */
+      footer {
+        margin-top: 20px;
+      }
+
+      /* Style the back button */
+      #Back {
+        background-color: rgba(127, 255, 212, 0.558);
+        font-size: 24px;
+        padding: 12px 24px;
+        border-color: rgba(127, 255, 212, 0.558);
+        border-radius: 5%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Select the User</h1>
+    </header>
+    <div>
+      <div class="box" onclick="location.href='/agent'">Agent</div>
+      <div class="box" onclick="location.href='/buyer'">Buyer</div>
+      <div class="box" onclick="location.href='/seller'">Seller</div>
+      <div class="box" onclick="location.href='/owner'">Owner</div>
+      <div class="box" onclick="location.href='/tenant'">Tenant</div>
+    </div>
+    <footer>
+      <form action="/" method="get">
+        <button id="Back">Back To Login</button>
+      </form>
+    </footer>
+  </body>
+</html>

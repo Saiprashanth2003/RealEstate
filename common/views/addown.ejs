@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Property</title>
+    <style>
+      body {
+        background-image: url("../images/background.jpg");
+      }
+      #big {
+        background-color: #ffffff98;
+        border: 1px solid #ffffff98;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px #ffffff98;
+        margin: auto;
+        margin-top: 40px;
+        padding: 100px;
+        max-width: 400px;
+      }
+      #small {
+        background-color: #f10505be;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      h2 {
+        text-align: center;
+      }
+      label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="password"],
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      .error {
+        color: #ff0000;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="big">
+      <form method="post" action="/addowner">
+        <h1>Enter the Details</h1>
+        <label for="Hno">Hno</label>
+        <input type="text" id="Hno" name="Hno" required />
+
+        <label for="Street">Street</label>
+        <input type="text" id="Street" name="Street" required />
+
+        <label for="City">City</label>
+        <input type="text" id="City" name="City" required />
+
+        <label for="Pincode">Pincode</label>
+        <input type="text" id="Pincode" name="Pincode" required />
+
+        <label for="Area">Area</label>
+        <input type="text" id="Area" name="Area" required />
+
+        <label for="Rent">Rent</label>
+        <input type="text" id="Rent" name="Rent" required />
+
+        <label for="BHK">BHK</label>
+        <input type="text" id="BHK" name="BHK" required />
+
+        <label for="Construction Year">Construction Year</label>
+        <input
+          type="text"
+          id="Construction_Year"
+          name="Construction_Year"
+          required
+        />
+
+        <label for="Information">Information</label>
+        <input type="text" id="Information" name="Information" required />
+
+        <input type="submit" value="Submit" />
+      </form>
+      <form action="/changedowner" method="get">
+        <button id="small">Cancel</button>
+      </form>
+    </div>
+  </body>
+</html>

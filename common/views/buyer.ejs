@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buyer</title>
+    <style>
+      body {
+        background-color: rgb(208, 208, 186);
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .property-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.property-item {
+  width: 300px;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.property-item h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.property-item p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.property-item ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.property-item li {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+  color: #999;
+}
+
+.property-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+#Login{
+  background-color: rgba(127, 255, 212, 0.558);
+	font-size: 24px; 
+	padding: 12px 24px;
+	border-color: rgba(127, 255, 212, 0.558);
+	box-sizing: border-box;
+	border-radius: 5%;
+}
+#buy{
+	background-color: rgba(127, 255, 212, 0.558);
+	font-size: 24px; 
+	padding: 12px 24px;
+	border-color: rgba(127, 255, 212, 0.558);
+	box-sizing: border-box;
+	border-radius: 5%;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>Property Information</h1>
+    <div class="property-list">
+      <% for (let i = 0; i < properties.length; i++) { %>
+        <div class="property-item">
+          <img src="../images/property.jpg">
+          <p>HNO: <%= properties[i].property_hno %>,
+          <%= properties[i].property_street %>,<%= properties[i].property_city %>,<%= properties[i].property_area %>,<%= properties[i].property_pincode %>
+          <ul>
+            <li><%= properties[i].property_price %></li>
+            <li><%= properties[i].property_bhk %>BHK</li>
+          </ul>
+          <%=properties[i].property_info%>
+        </p>
+        <h3>Agent Information</h3>
+          <p><%= properties[i].agent_name %>,
+          <ul>
+            <li><%= properties[i].agent_phone %></li>
+            <li><%= properties[i].agent_email %></li>
+          </ul>
+        </p>
+        <a href="/buy?params=<%= properties[i].property_id %>" id = "buy">Buy</a>
+        </div>
+      <% } %>
+    </div>
+    <form action="/" method = "get">
+      <button id = "Login">Back To Login</button>
+    </form>
+  </body>
+</html>

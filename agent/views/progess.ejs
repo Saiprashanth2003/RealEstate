@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Progress</title>
+    <style>
+      body {
+        background-color: rgb(208, 208, 186); /* set background color */
+      }
+      .block {
+        width: 50%;
+        height: 200px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 5px #888888; /* add box shadow for a nice effect */
+        margin-top: 50px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 200px;
+      }
+      #block1 {
+        background-color: #ffb6c1;
+        border-radius: 5%;
+      }
+      #block2 {
+        background-color: #add8e6;
+        border-radius: 5%;
+      }
+      #Back {
+        background-color: rgba(98, 242, 8, 0.449);
+        font-size: 24px;
+        padding: 12px 24px;
+        border-color: rgba(127, 255, 212, 0.558);
+        box-sizing: border-box;
+        border-radius: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="block1" class="block">You Sold: <%=sales%></div>
+    <div id="block2" class="block">You Rented: <%=rent%></div>
+
+    <a href="/changed" id="Back">Back</a>
+  </body>
+</html>

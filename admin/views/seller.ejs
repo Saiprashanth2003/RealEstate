@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Seller</title>
+    <style>
+      body {
+        background-image: url("../images/background.jpg");
+      }
+      #big {
+        background-color: #ffffff98;
+        border: 1px solid #ffffff98;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px #ffffff98;
+        margin: auto;
+        margin-top: 40px;
+        padding: 100px;
+        max-width: 400px;
+      }
+      #small {
+        background-color: #f10505be;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      h2 {
+        text-align: center;
+      }
+      label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="password"],
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      .error {
+        color: #ff0000;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="big">
+      <form method="post" action="/addseller">
+        <h1>Enter the Details</h1>
+        <label for="Seller Name">Seller Name</label>
+        <input type="text" id="Seller_Name" name="Seller_Name" required />
+
+        <label for="Seller Phone Number">Seller Phone Number</label>
+        <input type="text" id="Seller_Phone" name="Seller_Phone" required />
+
+        <label for="Seller Email">Seller Email</label>
+        <input type="text" id="Seller_Email" name="Seller_Email" required />
+
+        <label for="Seller Password">Seller Password</label>
+        <input
+          type="text"
+          id="Seller_Password"
+          name="Seller_Password"
+          required
+        />
+
+        <input type="submit" value="Submit" />
+      </form>
+      <form action="/select" method="get">
+        <button id="small">Cancel</button>
+      </form>
+    </div>
+  </body>
+</html>
